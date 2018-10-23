@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +62,199 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="admin_students.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="admin_students.Designer.cs">
+      <DependentUpon>admin_students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_Hod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_Hod.Designer.cs">
+      <DependentUpon>admin_Hod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assignmentGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assignmentGrid.Designer.cs">
+      <DependentUpon>assignmentGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classAllocDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>classAllocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="classGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classGrid.Designer.cs">
+      <DependentUpon>classGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="examGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="examGrid.Designer.cs">
+      <DependentUpon>examGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hodassignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hodassignment.Designer.cs">
+      <DependentUpon>hodassignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hodClassRout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hodClassRout.Designer.cs">
+      <DependentUpon>hodClassRout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hodDataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hodDataGrid.Designer.cs">
+      <DependentUpon>hodDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hodexamRout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hodexamRout.Designer.cs">
+      <DependentUpon>hodexamRout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hodMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hodMain.Designer.cs">
+      <DependentUpon>hodMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hodNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hodNotice.Designer.cs">
+      <DependentUpon>hodNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminMain.Designer.cs">
+      <DependentUpon>adminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="noticeGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="noticeGrid.Designer.cs">
+      <DependentUpon>noticeGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stdAssGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdAssGrid.Designer.cs">
+      <DependentUpon>stdAssGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stdAssingment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdAssingment.Designer.cs">
+      <DependentUpon>stdAssingment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stdClassRout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdClassRout.Designer.cs">
+      <DependentUpon>stdClassRout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stdDataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdDataGrid.Designer.cs">
+      <DependentUpon>stdDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stdExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdExam.Designer.cs">
+      <DependentUpon>stdExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stdNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdNotice.Designer.cs">
+      <DependentUpon>stdNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stdTeacherInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stdTeacherInfo.Designer.cs">
+      <DependentUpon>stdTeacherInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentMain.Designer.cs">
+      <DependentUpon>studentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacherGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacherGrid.Designer.cs">
+      <DependentUpon>teacherGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teachInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teachInfo.Designer.cs">
+      <DependentUpon>teachInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin_students.resx">
+      <DependentUpon>admin_students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_Hod.resx">
+      <DependentUpon>admin_Hod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assignmentGrid.resx">
+      <DependentUpon>assignmentGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="classGrid.resx">
+      <DependentUpon>classGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="examGrid.resx">
+      <DependentUpon>examGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hodassignment.resx">
+      <DependentUpon>hodassignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hodClassRout.resx">
+      <DependentUpon>hodClassRout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hodDataGrid.resx">
+      <DependentUpon>hodDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hodexamRout.resx">
+      <DependentUpon>hodexamRout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hodMain.resx">
+      <DependentUpon>hodMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hodNotice.resx">
+      <DependentUpon>hodNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminMain.resx">
+      <DependentUpon>adminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="noticeGrid.resx">
+      <DependentUpon>noticeGrid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +264,47 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="stdAssGrid.resx">
+      <DependentUpon>stdAssGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stdAssingment.resx">
+      <DependentUpon>stdAssingment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stdClassRout.resx">
+      <DependentUpon>stdClassRout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stdDataGrid.resx">
+      <DependentUpon>stdDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stdExam.resx">
+      <DependentUpon>stdExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stdNotice.resx">
+      <DependentUpon>stdNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stdTeacherInfo.resx">
+      <DependentUpon>stdTeacherInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentMain.resx">
+      <DependentUpon>studentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacherGrid.resx">
+      <DependentUpon>teacherGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teachInfo.resx">
+      <DependentUpon>teachInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="classAllocDataSet.xsc">
+      <DependentUpon>classAllocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="classAllocDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>classAllocDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="classAllocDataSet.xss">
+      <DependentUpon>classAllocDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +317,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="classAlloc.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="classAlloc_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>classAlloc.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
